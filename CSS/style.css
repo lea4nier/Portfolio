@@ -5,11 +5,11 @@
     box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
     font-family: "Playfair Display", serif;
-    /* Apply Google Font */
-    background-color: #f9f9f9;
-    /* Softer background color */
+    background-color: #f1f5f9;
+    /* Light grey background for a professional look */
     color: #333;
     line-height: 1.6;
     display: flex;
@@ -23,17 +23,30 @@ body {
 header {
     text-align: center;
     padding: 3rem 1rem;
-    background-color: #f6b5df;
-    color: rgb(73, 72, 72);
+    background-color: #ffedf1;
+    /* Soft pink for a girly touch */
+    color: #444;
+    /* Darker text for better contrast */
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+header:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge header on hover */
 }
 
 header h1 {
     font-size: 3rem;
     font-weight: 600;
-    /* Bold header */
     margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+header:hover h1 {
+    color: #8d8aff;
+    /* Soft lavender for a sophisticated girly vibe */
 }
 
 header p {
@@ -50,11 +63,18 @@ header p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 2rem;
     border-radius: 10px;
+    transform: scale(0.98);
+    transition: transform 0.3s ease;
+}
+
+#portfolio:hover {
+    transform: scale(1.02);
+    /* Slightly enlarge the portfolio section */
 }
 
 #portfolio h2 {
     font-size: 2.5rem;
-    color: #333;
+    color: #444;
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -71,28 +91,47 @@ header p {
 #portfolio li {
     font-size: 1.2rem;
     text-align: center;
+    position: relative;
 }
 
+/* Portfolio Link Styles */
 #portfolio a {
     text-decoration: none;
-    color: #007bff;
+    color: #0056b3;
+    /* Soft, professional blue */
     font-weight: 500;
-    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Only transitioning color and transform */
+    position: relative;
 }
 
 #portfolio a:hover {
-    color: #ff6347;
-    /* Tomato color */
-    transform: scale(1.05);
+    color: #003366;
+    /* Darker blue for better readability */
+    transform: scale(1.1);
+    /* Slightly enlarge text on hover */
 }
 
-/* Footer */
+/* Remove the ::before pseudo-element to avoid the box effect */
+#portfolio a::before {
+    content: none;
+}
+
+
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 1.5rem 1rem;
     background-color: #333;
     color: white;
     margin-top: auto;
-    /* Stick to the bottom of the page */
     font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+footer:hover {
+    background-color: #8d8aff;
+    /* Soft lavender background for footer hover */
 }
